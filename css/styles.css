@@ -10899,8 +10899,8 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
+    max-width: 12rem;
+    max-height: 12rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
   }
   #sideNav .navbar-collapse {
@@ -10951,7 +10951,7 @@ section.resume-section {
   padding-right: 1rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  max-width: 75rem;
+  max-width: 90rem;
 }
 section.resume-section .resume-section-content {
   width: 100%;
@@ -10959,7 +10959,7 @@ section.resume-section .resume-section-content {
 
 @media (min-width: 768px) {
   section.resume-section {
-    min-height: 100vh;
+    min-height: 60vh;
   }
 }
 @media (min-width: 992px) {
