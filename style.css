@@ -1,27 +1,27 @@
 :root {
-  /* Primary brand color – trustworthy, professional */
-  --primary: #0066cc;
-  /* Strong blue – main headings and links */
+  /* Primary brand color – clean and futuristic */
+  --primary: #00b4d8;
+  /* Bright cyan – energetic but professional */
 
-  /* Accent color – subtle highlights/buttons */
-  --secondary: #009688;
-  /* Teal – just a touch of modern green for contrast */
+  /* Accent color – subtle contrast */
+  --secondary: #0077b6;
+  /* Deep ocean blue – stability and trust */
 
-  /* Background color – dark and elegant */
-  --bg: #121212;
-  /* Dark gray/black – sleek, modern */
+  /* Background color – dark with a hint of blue */
+  --bg: #0a0f1f;
+  /* Almost black with a cool undertone */
 
-  /* Main text color – readable on dark background */
-  --text: #e0e0e0;
-  /* Light gray – professional and easy to read */
+  /* Main text color – soft white for readability */
+  --text: #e6e6e6;
+  /* Neutral light gray-white */
 
-  /* Subtle muted text / secondary text */
-  --text-muted: #9a9a9a;
-  /* Gray – for descriptions and less important text */
+  /* Muted text – gentle, secondary info */
+  --text-muted: #9ba3af;
+  /* Cool gray */
 
-  /* Highlight / call-to-action buttons */
-  --highlight: #1abc9c;
-  /* Soft teal or cyan – draws attention subtly */
+  /* Highlight color – neon touch for CTAs */
+  --highlight: #48cae4;
+  /* Electric aqua – subtle glow effect */
 }
 
 
@@ -38,9 +38,10 @@ body {
 
 /* NAVBAR */
 header {
+  border-bottom: 1px solid #1e2a3a;
   position: sticky;
   top: 0;
-  background: #111418;
+  background: var(--bg);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -102,25 +103,38 @@ header {
 }
 
 .hero-text .btn {
-  font-size: 2;
+  font-size: 1rem;
+  /* corrected font size */
   display: inline-block;
   background: var(--secondary);
   color: #fff;
   padding: 12px 20px;
-  border-radius: 13px;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
+  transition: all 0.3s ease;
+  /* smooth hover animation */
+  box-shadow: 0 0 0 transparent;
+  /* no glow initially */
 }
+
+.hero-text .btn:hover {
+  box-shadow: 0 0 80px 15px rgba(0, 150, 136, 0.25);
+  /* soft large glow */
+  transform: translateY(-2px);
+  /* slight lift on hover */
+}
+
 
 .hero img {
   width: 350px;
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid var(--primary);
-  box-shadow: 0 8px 15px rgb(0, 150, 136);
-  /* dark, soft shadow */
+  box-shadow: 0 0 200px 15px rgba(0, 180, 216, 0.20);
+  /* large, faint glow */
 }
+
 
 
 /* SECTIONS */
@@ -167,9 +181,10 @@ h2 {
 }
 
 footer {
+  border-top: 1px solid #1e2a3a;
   text-align: center;
   padding: 20px;
-  background: #111418;
+  background: var(--bg);
   color: #777;
   margin-top: 40px;
 }
@@ -274,9 +289,10 @@ nav a {
   text-decoration: none;
   font-size: 0.95em;
   padding: 6px 14px;
-  border-radius: 8px;
+  border-radius: 20px;
   transition: color 0.25s ease;
   overflow: hidden;
+  z-index: 1;
 }
 
 nav a::before {
@@ -285,17 +301,18 @@ nav a::before {
   inset: 0;
   background: linear-gradient(90deg, rgba(0, 188, 212, 0.15), rgba(33, 150, 243, 0.15));
   opacity: 0;
-  border-radius: 8px;
+  border-radius: 20px;
   transform: scale(0.95);
-  transition: all 0.3s ease;
-  z-index: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  z-index: -1;
+  box-shadow: 0 0 0 transparent;
 }
 
 nav a:hover::before {
   opacity: 1;
-  transform: scale(1);
-  box-shadow: 0 3px 10px #00bcd4;
+  transform: scale(1.05);
+  box-shadow: 0 0 80px 15px rgba(0, 150, 136, 0.25);
+  /* large, faint glow */
 }
 
 nav a:hover {
@@ -309,13 +326,30 @@ nav a span {
 
 .icons a {
   text-decoration: none;
-  /* Remove underline/underscore */
+  /* Remove underline */
   color: inherit;
-  /* Keep icon color consistent */
+  /* Keep default color */
   display: inline-flex;
-  /* Keep icons aligned properly */
+  /* Align icons nicely */
   align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  /* Size of the icon */
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  /* Smooth hover */
 }
+
+.icons a:hover {
+  color: var(--primary);
+  /* Light up the icon color */
+  text-shadow: 0 0 40px rgba(0, 180, 216, 0.3);
+  /* Subtle wide glow */
+  transform: translateY(-2px);
+  /* Slight lift on hover */
+  box-shadow: 0 0 80px 15px rgba(0, 150, 136, 0.25);
+}
+
 
 .icons svg {
   width: 24px;
@@ -341,7 +375,6 @@ nav a span {
   padding: 10px 18px;
   border-radius: 8px;
   transition: color 0.25s ease;
-  overflow: hidden;
   width: fit-content;
 }
 
@@ -355,17 +388,18 @@ nav a span {
   transform: scale(0.95);
   transition: all 0.3s ease;
   z-index: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
 }
 
 .contact-links a:hover::before {
   opacity: 1;
   transform: scale(1);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+
 }
 
 .contact-links a:hover {
   color: #fff;
+  box-shadow: 0 0 80px 15px rgba(0, 150, 136, 0.25);
 }
 
 .contact-links i {
@@ -385,4 +419,10 @@ nav a span {
     align-items: stretch;
     padding: 0 10%;
   }
+}
+
+.logo:hover {
+  box-shadow: 0 0 80px 15px rgba(0, 150, 136, 0.25);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
 }
