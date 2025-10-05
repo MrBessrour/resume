@@ -196,6 +196,12 @@ footer {
     text-align: center;
   }
 
+  .job .details p {
+    margin: 4px 0;
+    font-size: 1.2em;
+    color: #aaa;
+  }
+
   .hero img {
     margin-top: 30px;
   }
