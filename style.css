@@ -307,6 +307,24 @@ footer {
   font-size: 5rem;
 }
 
+
+nav .main-link {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2em;       /* Bigger size */
+  font-weight: 500;
+  color: #fff;
+  margin-right: 30px;   /* Separate it visually */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
 nav a {
   position: relative;
   color: #aaa;
@@ -452,19 +470,4 @@ nav a span {
   transition: all 0.3s ease;
 }
 
-nav .main-link {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2em;       /* Bigger size */
-  font-weight: 500;
-  color: #fff;
-  margin-right: 30px;   /* Separate it visually */
-  letter-spacing: 2px;
-  text-transform: capitalize;
-}
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  justify-content: center;
-}
